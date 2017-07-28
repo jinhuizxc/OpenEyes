@@ -36,6 +36,7 @@ public class SearchActivity extends ToolbarActivity implements View.OnClickListe
 
     public static final String KEYWORD = "keyword";
 
+    // 第三方库FlowLayout-lib
     private TagFlowLayout tagLayout;
     private EditText searchEdit;
 
@@ -56,8 +57,9 @@ public class SearchActivity extends ToolbarActivity implements View.OnClickListe
         ImageButton clearButton = (ImageButton) findViewById(R.id.clear_btn);
         clearButton.setOnClickListener(this);
 
+        // 加载下方标签
         loadTrendingTag();
-
+        // 设置EditText的内容输入
         keyListener();
 
     }
@@ -77,6 +79,7 @@ public class SearchActivity extends ToolbarActivity implements View.OnClickListe
                 }, ErrorAction.error(this));
     }
 
+    // 绑定标签数据显示
     private void bindData() {
         tagLayout.setAdapter(new TagAdapter<String>(tags) {
             @Override

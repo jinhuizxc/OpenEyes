@@ -30,6 +30,9 @@
         <activity android:name=".ui.activity.VideoAuthorActivity" />
         <activity android:name=".ui.activity.SearchActivity" />
         <activity android:name=".ui.activity.FindInterestingActivity" />
+        <activity
+            android:name=".ui.activity.ResultActivity"
+            android:label="@string/result_title" />
     </application>
 
 
